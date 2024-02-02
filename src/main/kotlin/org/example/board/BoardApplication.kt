@@ -1,11 +1,11 @@
-package org.example.todo
+package org.example.board
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class TodoApplication
+class BoardApplication
 
 fun main(args: Array<String>) {
-    runApplication<TodoApplication>(*args)
+    runApplication<BoardApplication>(*args)
 }
