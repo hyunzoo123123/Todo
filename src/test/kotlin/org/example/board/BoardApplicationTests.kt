@@ -1,10 +1,10 @@
-package org.example.todo
+package org.example.board
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class TodoApplicationTests {
+class BoardApplicationTests {
 
     @Test
     fun contextLoads() {

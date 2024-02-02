@@ -13,8 +13,8 @@ class SwaggerConfig {
         return OpenAPI()
             .info(
                 Info()
-                    .title("Todo List API")
-                    .description("Todo List API")
+                    .title("board API")
+                    .description("board API")
                     .version("v1.0.0")
             )
     }
