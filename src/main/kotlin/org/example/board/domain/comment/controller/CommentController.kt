@@ -4,9 +4,13 @@ import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
 
+@RestController
+@RequestMapping("/posts/{postId}/comments")
 class CommentController {
-    @PostMapping
+    @PostMapping("/{commentsId}")
     fun createComment() {
         println("PostController.create")
     }
@@ -16,12 +20,12 @@ class CommentController {
         println("PostController.read")
     }
 
-    @PutMapping
+    @PutMapping("/{commentsId}")
     fun updateComment() {
         println("PostController.update")
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{commentsId}")
     fun deleteComment() {
         println("PostController.delete")
     }
