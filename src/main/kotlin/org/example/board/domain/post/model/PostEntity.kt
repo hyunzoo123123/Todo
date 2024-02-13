@@ -4,6 +4,7 @@ import java.time.LocalDateTime
 
 class PostEntity {
     var title: String,
-    var content: String,
-    var createdAt: LocalDateTime
+    var createdAt: LocalDateTime,
+    var title: String,
+    var contents: String
 }
