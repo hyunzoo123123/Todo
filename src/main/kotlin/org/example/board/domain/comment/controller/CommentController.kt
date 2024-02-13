@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("/posts")
 class CommentController(
-    private val commentService : CommentService
+    private val commentService: CommentService
 ){
     @PostMapping("/{postId}/comments/{commentsId}")
     fun createComment(
@@ -44,11 +44,14 @@ class CommentController(
             .body(commentService.updateComment(postId, commentUpdateRequest))
     }
 
-    @DeleteMapping("/{postId}/comments/{commentsId}")
-    fun deleteComment(@PathVariable postId: Long, @PathVariable commentsId: Long): ResponseEntity<Unit>{
-        commentService.deleteComment(postId, commentsId)
+    @DeleteMapping("/{postId}/comments/{commentId}")
+    fun deleteComment(
+
+        @PathVariable postId: Int,        // 포스트 ID를 경로 변수로 받음
+        @PathVariable commentId: Int      // 댓글 ID를 경로 변수로 받음
+    ): ResponseEntity<Unit> {
         return ResponseEntity
             .status(HttpStatus.NO_CONTENT)
-            .build()
+            .body(commentService.deleteComment(postId, commentId))
     }
 }
